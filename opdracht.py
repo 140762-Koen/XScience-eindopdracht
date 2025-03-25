@@ -38,8 +38,7 @@ responses = {"Hi":["Hallo., hoe gaat het?","Hoe voelt u zich?","Hallo.","Hoi."],
 }
 
 
-#De bot laten praten en een patroon te laten herkenen.
-#Ik (Koen) heb voor het random getal in de tekst te zetten chat gpt gebruikt omdat er een fout melding was van github.
+
 def construct_dialogue():
   message = input()
   patterns = "Wat kost (.*)"
@@ -49,14 +48,20 @@ def construct_dialogue():
     print (random.choice(responses[message]))
   else:
     if match: 
-      #De bot een getal te laten kiezen voor de prijs.
       random_getal = random.randint(3,50)
       print ("BOT: " + match.group(1) + " kost: ",random_getal," euro.")
     else: 
       print("Ik hoorde je je zei",message)
 
-#De tekst.
 print("Dit was een leuk kattenfeitje want wij van de jumbo houden heel erg van alle soorten dieren. Hallo, dit is de chatbot van de jumbo. Dit is nog een beta variant dus kan de bot mogenlijk niet alle vragen (goed) beantwoorden. Gebruik alstublieft een hoofdletter aan het begin van een vraag en geen leestekens in de vraag, dan krijgt u het beste antwoord.")
 while True:
   construct_dialogue()
-  
+
+
+
+
+
+
+
+
+
